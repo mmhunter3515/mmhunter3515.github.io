@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//apps.bdimg.com">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="v2ray-ssr-learn">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<title>SSR vs V2ray vs Trojan 3类机场对比-v2ray-ssr-learn</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="stylesheet" id="wp-block-library-css" href="https://mmhunter3515.github.io/wp-includes/css/dist/block-library/style.min.css?ver=6.0.1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="_bootstrap-css" href="https://mmhunter3515.github.io/wp-content/themes/dux/css/bootstrap.min.css?ver=5.0" type="text/css" media="all">
+<link rel="stylesheet" id="_fontawesome-css" href="https://mmhunter3515.github.io/wp-content/themes/dux/css/font-awesome.min.css?ver=5.0" type="text/css" media="all">
+<link rel="stylesheet" id="_main-css" href="https://mmhunter3515.github.io/wp-content/themes/dux/css/main.css?ver=5.0" type="text/css" media="all">
+<script type="text/javascript" src="https://mmhunter3515.github.io/wp-content/themes/dux/js/libs/jquery.min.js?ver=5.0" id="jquery-js"></script>
+<link rel="https://api.w.org/" href="https://mmhunter3515.github.io/wp-json/">
+<link rel="alternate" type="application/json" href="https://mmhunter3515.github.io/wp-json/wp/v2/posts/54">
+<link rel="canonical" href="https://mmhunter3515.github.io/ssr-vs-v2ray-vs-trojan-3/">
+<link rel="shortlink" href="https://mmhunter3515.github.io/?p=54">
+<link rel="alternate" type="application/json+oembed" href="https://mmhunter3515.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhttps://mmhunter3515.github.io%2Fssr-vs-v2ray-vs-trojan-3%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mmhunter3515.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhttps://mmhunter3515.github.io%2Fssr-vs-v2ray-vs-trojan-3%2F&#038;format=xml">
+<meta name="keywords" content="v2ray-ssr-机场">
+<meta name="description" content="从2019年下半年开始的时候，很多VPN都已经进入永远被墙的阶段，而站得住脚的SSR,V2ray，Troja三大巨头偶尔也陷入被封的境地。因此很多科学上网的人对此更是议论纷纷，并且不太明白为什么如今中国防火墙如此的严格。在此等严格的布局之下，又有什么办法可以做到科学上网呢。  关于 Trojan 与 V2ray 断流 网速是很重要的，如果你当前网络不好，即便是拥有了最高级的协议，那依旧是无法拯救的">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<link rel="shortcut icon" href="https://mmhunter3515.github.io/favicon.ico">
+<!--[if lt IE 9]><script src="https://mmhunter3515.github.io/wp-content/themes/dux/js/libs/html5.min.js"></script><![endif]-->
+</head>
+<body class="post-template-default single single-post postid-54 single-format-standard m-excerpt-cat comment-open site-layout-2">
+<header class="header">
+	<div class="container">
+		<div class="logo"><a href="https://mmhunter3515.github.io/" title="v2ray-ssr-learn"><img src="https://mmhunter3515.github.io/wp-content/uploads/2022/07/PornHubLogo-2.png" alt="v2ray-ssr-learn">v2ray-ssr-learn</a></div>				<ul class="site-nav site-navbar">
+			<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-8"><a href="https://mmhunter3515.github.io/">首页</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-7"><a href="https://mmhunter3515.github.io/v2ray-ssr/">v2ray-ssr-机场</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6"><a href="https://mmhunter3515.github.io/v2ray-ssr-learn/">v2ray-ssr-教程</a></li>
+					</ul>
+				<div class="topbar">
+			<ul class="site-nav topmenu">
+											</ul>
+					</div>
+						<i class="fa fa-bars m-icon-nav"></i>
+			</div>
+</header>
+<div class="site-search">
+	<div class="container">
+		<form method="get" class="site-search-form" action="https://mmhunter3515.github.io/">
+<input class="search-input" name="s" type="text" placeholder="输入关键字" value=""><button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+</form>	</div>
+</div>	<div class="breadcrumbs">
+		<div class="container">当前位置：<a href="https://mmhunter3515.github.io/">v2ray-ssr-learn</a> <small>></small> <a href="https://mmhunter3515.github.io/v2ray-ssr/">v2ray-ssr-机场</a> <small>></small> 正文</div>
+	</div>
+<section class="container">
+	<div class="content-wrap">
+	<div class="content">
+				<header class="article-header">
+			<h1 class="article-title"><a href="https://mmhunter3515.github.io/ssr-vs-v2ray-vs-trojan-3/">SSR vs V2ray vs Trojan 3类机场对比</a></h1>
+			<div class="article-meta">
+				<span class="item">2022-07-15</span>
+												<span class="item">分类：<a href="https://mmhunter3515.github.io/v2ray-ssr/" rel="category tag">v2ray-ssr-机场</a></span>
+				<span class="item post-views">阅读(1)</span>				<span class="item">评论(0)</span>
+				<span class="item"></span>
+			</div>
+		</header>
+				<article class="article-content">
+						<p data-adtags-visited="true">从2019年下半年开始的时候，很多VPN都已经进入永远被墙的阶段，而站得住脚的SSR,V2ray，Troja三大巨头偶尔也陷入被封的境地。因此很多<a href="http://bit.ly/3NakH92">科学上网</a>的人对此更是议论纷纷，并且不太明白为什么如今中国防火墙如此的严格。在此等严格的布局之下，又有什么办法可以做到科学上网呢。</p>
+<h2 id="关于-trojan-与-v2ray-断流"><a href="http://bit.ly/3NakH92">关于 Trojan 与 V2ray 断流</a></h2>
+<p data-adtags-visited="true">网速是很重要的，如果你当前网络不好，即便是拥有了最高级的协议，那依旧是无法拯救的。如果发现了网络断流的状态，就可以登录主机进行异地测速。</p>
+<p data-adtags-visited="true">如果你在使用软件访问网络的时候速度很慢，那就是它的配置是正确的，因为若是配置错误了那么这个软件是完全不能够用的。</p>
+<p data-adtags-visited="true">当你连接上网络的时候看到延迟有两三百也不用担心，因为四百以内的延迟都是属于正常的现象，若是你看到了丢包率超过 15% ，那么你的软件一定有大问题，需要进行自行排查。首先可以看主机商网络稳定性，其次再看网络的阻断问题。</p>
+<p data-adtags-visited="true">排查域名DNS之前需要掌握如何查询域名的相关知识，假若你的主机的延迟在100Ms以内，当我们在解析域名的时候，延迟高达两千ms。</p>
+<h2 id="trojan-简介-trojan-与-v2ray-对比"><a href="http://bit.ly/3NakH92">Trojan 简介 &amp; Trojan 与 V2ray 对比</a></h2>
+<h3 id="trojan-安全性">Trojan 安全性</h3>
+<p data-adtags-visited="true">Trojan（中文名字特洛伊木马）没有采用过任何的加密方式，它直接将自己的网络流量变成正常网络流量的HTTPS，这样就可以将防火墙完全蒙骗过去，做到以假乱真。</p>
+<p data-adtags-visited="true">V2Ray 如果搭配着 WebSocket + TLS 使用的时候，它的网络流量的真假程度和 Trojan 本身几乎没有过大的区别。</p>
+<p data-adtags-visited="true">Trojan 还是一个完完全全的细节怪，除了在这些大配置上进行高配置的要求，甚至在细节上面也采用了网站常用服务器 Nginx 特征，和正常网络的相似程度竟然可以高达百分之九十九。</p>
+<h2 id="trojan-以及v2ray-速度比较">Trojan 以及V2ray 速度比较</h2>
+<p data-adtags-visited="true">我自己本人是在用Trojan和V2ray这个节点的，为了测试一下这两者之间的速度快慢，我用了同等的宽带以及网络环境下进行测试，从而得出Trojan 的速度要比V2ray来的 更快。</p>
+<h3 id="而他们之间速度的差距原因在于以下两点">而他们之间速度的差距原因在于以下两点：</h3>
+<p data-adtags-visited="true">V2ray 的 WebSocket+TLS 模式两种协议加密，因此它的保密性更加的卓越；</p>
+<p data-adtags-visited="true">V2ray 的 处理网络信息功能本身就要比特洛伊木马来的慢而差。</p>
+<p data-adtags-visited="true">很多人听到特洛伊木马这个名词就觉得不好，而实际上特洛伊木马的性能技术支持都要比V2ray来的优越，你可以先看看自己的电脑或是手机客户端是否支持这个软件，如果支持可以进行一番尝试。</p>
+<p data-adtags-visited="true">SSR、V2ray 协议，这两种类型的协议，可以将数据包的流量模式演变成为Socket5、VMess这种小众的数据，此外V2ray 还申请了专利的流量识别。</p>
+<h3 id="加密流量">加密流量</h3>
+<p data-adtags-visited="true">骗过防火墙的方式比较简单，那就是直接让防火墙以为当下的流量就是正常的网络流量，这样难以检测到的流量信息就非常难以被墙。</p>
+<p data-adtags-visited="true"><strong>优点</strong>：HTTP 是我们日常经常上网的经典流量信息，即便是有的HTTP信号有点问题，中国防火墙也不会多去关注，因为这是在容差以内的网络信息。</p>
+<p data-adtags-visited="true">我们可以做一个很简单的比喻，如果说中国防火墙要检测到的网络信息是十分的透明化，那么HTTP就是百分百的透明人，而<a href="https://www.drazehosting.com/2020%e5%b9%b4%e6%9c%80%e4%bd%b3v2ray%e6%9c%ba%e5%9c%ba/">SS/SSR/V2Ray</a>的透明化程度可以达到百分之九十，然后他们就会搭载一个透明的技术手段，尽量让自己的透明度变成百分之九十九，这样就可以躲过中国防火墙的检测了。</p>
+<p data-adtags-visited="true">反正我个人在特殊时期用的SS/SSR/V2Ray都是很能抗打的，几乎没有出现过断网不可以用的情况，如果你的SS/SSR/V2Ray出现过这种情况，这也是和你所在的区域有着很大的关系，但是过两天就好了也不需要过于着急。</p>
+<p data-adtags-visited="true">在一些特殊时期和特殊环节的时候，中国防火墙的严谨程度会比以往来的高许多。所以这个时候网络信息伪装不好的VPN节点就会受到被墙。</p>
+<p data-adtags-visited="true">你要想知道自己的IP地址有没有被墙，很简单试试看翻墙能不能成功，如果成功且还是可以正常上网，那就是没有被墙，如果不能成功那就是被墙了。这种大型的节点一般都有着很强力的背书，因此也不要担心永远都不可以使用了。</p>
+<h2 id="v2ray-使用-cdn-的优缺点">V2ray 使用 CDN 的优缺点</h2>
+<p data-adtags-visited="true"><strong>优点：</strong></p>
+<p data-adtags-visited="true">能够最大程度避免被墙，如果万一被墙了，就可以依靠这个手段重获新手。</p>
+<p data-adtags-visited="true">可以加速线路的运行速度</p>
+<p data-adtags-visited="true"><strong>缺点：</strong></p>
+<p data-adtags-visited="true">配置繁琐，对于不知道如何操作的人而言这是一件很大的困难。将会在别的文章对其进行详细的介绍。</p>
+<h2 id="科普一下科学上网原理">科普一下科学上网原理</h2>
+<p data-adtags-visited="true">1.对于从业外贸的人而言，科学上网是十分必要的，他们需要到国外客户的网站上看客户买的单品以及客户在ins上面更新的动态，只有知道了客户的需求之后才可以更好的安利自己的产品，推荐自己。</p>
+<p data-adtags-visited="true">2.我们中国对于视频文化、艺术等有着自己的审核标准，而没有达到这个标准的任何文化都进不到我们国内的网站，但是在国外的网站是可以风生水起的。因此对这些文化感情的人就会凭借着科学上网进行查阅。</p>
+<p data-adtags-visited="true">3.当我们国内的用户可以访问国外网站的时候，我们还可以看到世界的更多面，国家和国家之间的文化自然是存在差异的，但是我们可以选择取其精华，弃其糟粕。</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img class="wp-image-7283" src="https://www.drazehosting.com/wp-content/uploads/2020/07/word-image-7.png" alt=""></figure>
+</div>
+<h2 id="科学上网浅谈">科学上网浅谈</h2>
+<p data-adtags-visited="true">防火墙存在的意义固然是有的，因为在国外有非常对我们国内不友好的新闻导向，这就会令人看着十分的愤怒，再加上有的人心智也许没有成熟，看到这种新闻可能会对我们国内的外国人有很大的反感。因此防火墙可以保护心智未成熟的人先不要看到这些，有些文化输出上的差异对于部分群体来说刺激过大。</p>
+<p data-adtags-visited="true">但是我觉得科学上网的好处是大于弊端的，因为国外的视屏网站上也有非常多值得学习的地方，如果说看到了那些不好的舆论导向，我们身为中国人有权利也有言语的自由，可以和这些人进行辩驳。</p>
+<p data-adtags-visited="true">就比如此次的疫情事件，我们中国现如今以及处于了疫情相对稳定的时候，但是国外的网站上还是肆意抹黑我们，说我们现在又进入到了疫情很严重的时候，很多地方已经禁止了我们的出入，而在此时，已经成功科学上网的我们就可以进行拍摄一段我们现如今生活的视频传到YouTube网站上面，给这些不明真相，满嘴胡话的人看看，我们现如今的人们生活可是相对稳定正常，每个人都是正常上下班，正常上下学，只是为了更好的保护自己，口罩依旧还带在脸上。</p>
+<p data-adtags-visited="true">我们每个人都要有辨别是非的能力，而当我们遇到了不明的事实的时候，我们也有权利去宣告这个世界，这些舆论都是假的。</p>
+<h2 id="v2ray-简介">V2ray 简介</h2>
+<p data-adtags-visited="true">SS实际上是我第一次用的节点，V2ray的使用时间我是从今年年初的时候才开始使用，毕竟想试试看这个有着超过SSR势头的节点究竟是什么样子。</p>
+<p data-adtags-visited="true">多入口多出口: 出站进站这些都是独立的，彼此之间是互不干扰的关系。</p>
+<p data-adtags-visited="true">可定制化路由: 当你自动连接成功之后，系统会对你当前的网络环境进行定义，然后就为你节选出最合适的网络环境。</p>
+<p data-adtags-visited="true">隐蔽性: V2Ray 的节点可以伪装成正常的网站（HTTPS），将其流量与正常的网页流量混淆，以避开第三方干扰。</p>
+<p data-adtags-visited="true">反向代理: 市面上常规通用的反向代理支持，内网穿透功能是他最大的特色。</p>
+<p data-adtags-visited="true">多平台支持: 原生支持所有常见平台，电脑客户端的支持macOS以及Windows还有不常见的系统，手机客户端的所有系统都可以支持。</p>
+<h2 id="服务器对科学上网的影响">服务器对科学上网的影响</h2>
+<p data-adtags-visited="true">服务器线路是最重要的，选择科学上网服务器线路最核心的点就是：带宽 的重要性要大于等于丢包率 ，丢包率的重要性要高于延迟。</p>
+<p data-adtags-visited="true">宽带是很重要的，对于这一点想必大家都是很熟悉的，毕竟我们日常生活里面上网的快慢都是和宽带有着紧密的联系，如果宽带的网速不好，那你无论是多少好的服务商都是没有办法让你的科学上网环境处于一个优秀的状态。</p>
+<p data-adtags-visited="true">现在我们的宽带主要是运营商有移动电信以及联通，其中联通是我觉得这辈子都不会用的宽带，因此网速真的太过于辣鸡，用移动还是用电信就看消费者自身的看法了。</p>
+<p data-adtags-visited="true">如果你要对宽带的网速进行测试，那么一定要选择在一个网络高峰期。这个高峰期的网速好了，那任何时间都不需要担心了。</p>
+<h2 id="代理上网必看常见问题">代理上网必看常见问题</h2>
+<h3 id="q-ssr-用不了-按照步骤操作无效">Q: SSR 用不了，按照步骤操作无效</h3>
+<p data-adtags-visited="true">A: 首先可以先检查 SS 服务端有没有问题，再查看代理设置的数值是否是1080，端口、IP ping 是否处于联机的状态。</p>
+<p data-adtags-visited="true">机场篇</p>
+<h3 id="q-机场网站打不开了">Q: 机场网站打不开了</h3>
+<p data-adtags-visited="true">A: 那就是被墙了，如果登录上去没有办法打开你可以等两天看看，因为有时候机子本身会出问题，如果两三天后还是没有办法登录，那就考虑换个别的看看吧。</p>
+<h3 id="q-机场注册不了-收不到邮件">Q: 机场注册不了，收不到邮件</h3>
+<p data-adtags-visited="true">A: 可能在你的垃圾邮箱里，你可以去垃圾邮箱里面看看有没有哦。</p>
+<h3 id="q-代理上网速度慢">Q: 代理上网速度慢</h3>
+<p data-adtags-visited="true">A: 刚开始上网的时候可能会因为流量过大导致网速变慢，但是过一段时间后再用就没有这个问题了，不用担心呢。</p>
+<h3 id="q-会不会泄露个人隐私">Q: 会不会泄露个人隐私</h3>
+<p data-adtags-visited="true">A: 不会，正规的节点都是以保护用户个人隐私为出发，毕竟若是这个节点会泄露隐私，那么大家自然是都不想用的，有的人甚至会将这些当做保护自己隐私的方式。甚至有的VPN研发的初衷就是为了保护隐私而生的。</p>
+		</article>
+								            <div class="post-actions">
+            	<a href="javascript:;" class="post-like action action-like" data-pid="54"><i class="fa fa-thumbs-o-up"></i>赞(<span>0</span>)</a>            	<a href="javascript:;" class="action action-rewards" data-event="rewards"><i class="fa fa-jpy"></i> </a>            	            </div>
+        		<div class="post-copyright">未经允许不得转载：<a href="https://mmhunter3515.github.io/">v2ray-ssr-learn</a> &raquo; <a href="https://mmhunter3515.github.io/ssr-vs-v2ray-vs-trojan-3/">SSR vs V2ray vs Trojan 3类机场对比</a>
+</div>		
+					<div class="action-share"></div>
+		
+		<div class="article-tags"></div>
+		
+		
+		            <nav class="article-nav">
+                <span class="article-nav-prev">上一篇<br><a href="https://mmhunter3515.github.io/most-detailed-v2ray-tutorials/" rel="prev">最详细V2Ray教程: 安装和配置教学</a></span>
+                <span class="article-nav-next"></span>
+            </nav>
+        
+				<div class="relates">
+<div class="title"><h3>相关推荐</h3></div>
+<ul>
+<li><a href="https://mmhunter3515.github.io/blinkload-ssr-v2ray/">Blinkload SSR/V2Ray全协议的全能型机场</a></li>
+<li><a href="https://mmhunter3515.github.io/glados-v2ray-ssr/">GLaDOS v2ray/ssr机场，数百个优质节点可供选择</a></li>
+<li><a href="https://mmhunter3515.github.io/mecloud-ssr-v2ray/">觅云(MeCloud) 稳定的SSR/V2Ray看奈飞视频的机场</a></li>
+<li><a href="https://mmhunter3515.github.io/v2box-v2ray/">V2BOX V2Ray机场，其采用了全IEPL内网专线</a></li>
+<li><a href="https://mmhunter3515.github.io/v2club-v2ray/">V2Club – 专业的高端V2Ray机场</a></li>
+<li><a href="https://mmhunter3515.github.io/duangcloud-v2ray/">DuangCloud – 稳定好用的V2Ray机场</a></li>
+<li><a href="https://mmhunter3515.github.io/mielink%e7%be%8a%e5%9c%88%e8%af%84%e6%b5%8b/">MieLink羊圈评测</a></li>
+</ul>
+</div>				<div class="title" id="comments">
+	<h3>评论 <small>抢沙发</small>
+</h3>
+</div>
+<div id="respond" class="no_webshot">
+		
+	<form action="https://mmhunter3515.github.io/wp-comments-post.php" method="post" id="commentform">
+		<div class="comt">
+			<div class="comt-title">
+				<img data-src="https://secure.gravatar.com/avatar/?s=100&d=mm" class="avatar avatar-100" height="50" width="50">				<p><a id="cancel-comment-reply-link" href="javascript:;">取消</a></p>
+			</div>
+			<div class="comt-box">
+				<textarea placeholder="你的评论可以一针见血" class="input-block-level comt-area" name="comment" id="comment" cols="100%" rows="3" tabindex="1" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+				<div class="comt-ctrl">
+					<div class="comt-tips">
+<input type="hidden" name="comment_post_ID" value="54" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<label for="comment_mail_notify" class="checkbox inline hide" style="padding-top:0"><input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked>有人回复时邮件通知我</label>
+</div>
+					<button type="submit" name="submit" id="submit" tabindex="5">提交评论</button>
+					<!-- <span data-type="comment-insert-smilie" class="muted comt-smilie"><i class="icon-thumbs-up icon12"></i> 表情</span> -->
+				</div>
+			</div>
+
+												<div class="comt-comterinfo" id="comment-author-info">
+						<ul>
+							<li class="form-inline">
+<label class="hide" for="author">昵称</label><input class="ipt" type="text" name="author" id="author" value="" tabindex="2" placeholder="昵称"><span class="text-muted">昵称 (必填)</span>
+</li>
+							<li class="form-inline">
+<label class="hide" for="email">邮箱</label><input class="ipt" type="text" name="email" id="email" value="" tabindex="3" placeholder="邮箱"><span class="text-muted">邮箱 (必填)</span>
+</li>
+							<li class="form-inline">
+<label class="hide" for="url">网址</label><input class="ipt" type="text" name="url" id="url" value="" tabindex="4" placeholder="网址"><span class="text-muted">网址</span>
+</li>
+						</ul>
+					</div>
+									</div>
+
+	</form>
+	</div>
+	</div>
+	</div>
+	<div class="sidebar">
+</div></section>
+
+
+<footer class="footer">
+	<div class="container">
+						<p>&copy; 2022 <a href="https://mmhunter3515.github.io/">v2ray-ssr-learn</a> &nbsp; </p>
+			</div>
+</footer>
+
+
+<script>
+window.jsui={
+	www: 'https://mmhunter3515.github.io',
+	uri: 'https://mmhunter3515.github.io/wp-content/themes/dux',
+	ver: '5.0',
+	roll: ["1","2"],
+	ajaxpager: '5',
+	url_rp: 'https://mmhunter3515.github.io/?page_id=2',
+	qq_id: '',
+	qq_tip: ''
+};
+</script>
+<script type="text/javascript" src="https://mmhunter3515.github.io/wp-content/themes/dux/js/libs/bootstrap.min.js?ver=5.0" id="bootstrap-js"></script>
+<script type="text/javascript" src="https://mmhunter3515.github.io/wp-content/themes/dux/js/loader.js?ver=5.0" id="_loader-js"></script>
+</body>
+</html>

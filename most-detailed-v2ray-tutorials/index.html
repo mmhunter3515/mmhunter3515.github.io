@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//apps.bdimg.com">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="v2ray-ssr-learn">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<title>最详细V2Ray教程: 安装和配置教学-v2ray-ssr-learn</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="stylesheet" id="wp-block-library-css" href="https://mmhunter3515.github.io/wp-includes/css/dist/block-library/style.min.css?ver=6.0.1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="_bootstrap-css" href="https://mmhunter3515.github.io/wp-content/themes/dux/css/bootstrap.min.css?ver=5.0" type="text/css" media="all">
+<link rel="stylesheet" id="_fontawesome-css" href="https://mmhunter3515.github.io/wp-content/themes/dux/css/font-awesome.min.css?ver=5.0" type="text/css" media="all">
+<link rel="stylesheet" id="_main-css" href="https://mmhunter3515.github.io/wp-content/themes/dux/css/main.css?ver=5.0" type="text/css" media="all">
+<script type="text/javascript" src="https://mmhunter3515.github.io/wp-content/themes/dux/js/libs/jquery.min.js?ver=5.0" id="jquery-js"></script>
+<link rel="https://api.w.org/" href="https://mmhunter3515.github.io/wp-json/">
+<link rel="alternate" type="application/json" href="https://mmhunter3515.github.io/wp-json/wp/v2/posts/51">
+<link rel="canonical" href="https://mmhunter3515.github.io/most-detailed-v2ray-tutorials/">
+<link rel="shortlink" href="https://mmhunter3515.github.io/?p=51">
+<link rel="alternate" type="application/json+oembed" href="https://mmhunter3515.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhttps://mmhunter3515.github.io%2Fmost-detailed-v2ray-tutorials%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mmhunter3515.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhttps://mmhunter3515.github.io%2Fmost-detailed-v2ray-tutorials%2F&#038;format=xml">
+<meta name="keywords" content="v2ray-ssr-教程">
+<meta name="description" content="V2Ray实际上是在Shadowsocks基础上革新出来的一个代理工具，它的性能虽然是基于Shadowsocks，但是却优于Shadowsocks，它将Shadowsocks功能当中的缺陷问题进行了弥补。同时加强了混淆协议的处理，让中国防火墙更难以墙到V2Ray，本文将对V2Ray进行具体的说明，其中包括V2Ray节点的搭建，以及如何使用一键安装脚本进行安装，此外还将对V2Rady节点优化以及V2">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<link rel="shortcut icon" href="https://mmhunter3515.github.io/favicon.ico">
+<!--[if lt IE 9]><script src="https://mmhunter3515.github.io/wp-content/themes/dux/js/libs/html5.min.js"></script><![endif]-->
+</head>
+<body class="post-template-default single single-post postid-51 single-format-standard m-excerpt-cat comment-open site-layout-2">
+<header class="header">
+	<div class="container">
+		<div class="logo"><a href="https://mmhunter3515.github.io/" title="v2ray-ssr-learn"><img src="https://mmhunter3515.github.io/wp-content/uploads/2022/07/PornHubLogo-2.png" alt="v2ray-ssr-learn">v2ray-ssr-learn</a></div>				<ul class="site-nav site-navbar">
+			<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-8"><a href="https://mmhunter3515.github.io/">首页</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7"><a href="https://mmhunter3515.github.io/v2ray-ssr/">v2ray-ssr-机场</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-6"><a href="https://mmhunter3515.github.io/v2ray-ssr-learn/">v2ray-ssr-教程</a></li>
+					</ul>
+				<div class="topbar">
+			<ul class="site-nav topmenu">
+											</ul>
+					</div>
+						<i class="fa fa-bars m-icon-nav"></i>
+			</div>
+</header>
+<div class="site-search">
+	<div class="container">
+		<form method="get" class="site-search-form" action="https://mmhunter3515.github.io/">
+<input class="search-input" name="s" type="text" placeholder="输入关键字" value=""><button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+</form>	</div>
+</div>	<div class="breadcrumbs">
+		<div class="container">当前位置：<a href="https://mmhunter3515.github.io/">v2ray-ssr-learn</a> <small>></small> <a href="https://mmhunter3515.github.io/v2ray-ssr-learn/">v2ray-ssr-教程</a> <small>></small> 正文</div>
+	</div>
+<section class="container">
+	<div class="content-wrap">
+	<div class="content">
+				<header class="article-header">
+			<h1 class="article-title"><a href="https://mmhunter3515.github.io/most-detailed-v2ray-tutorials/">最详细V2Ray教程: 安装和配置教学</a></h1>
+			<div class="article-meta">
+				<span class="item">2022-07-15</span>
+												<span class="item">分类：<a href="https://mmhunter3515.github.io/v2ray-ssr-learn/" rel="category tag">v2ray-ssr-教程</a></span>
+				<span class="item post-views">阅读(1)</span>				<span class="item">评论(0)</span>
+				<span class="item"></span>
+			</div>
+		</header>
+				<article class="article-content">
+						<p data-adtags-visited="true">V2Ray实际上是在Shadowsocks基础上革新出来的一个代理工具，它的性能虽然是基于Shadowsocks，但是却优于Shadowsocks，它将Shadowsocks功能当中的缺陷问题进行了弥补。同时加强了混淆协议的处理，让中国防火墙更难以墙到V2Ray，本文将对V2Ray进行具体的说明，其中包括<a href="http://bit.ly/3NakH92" target="_blank" rel="noreferrer noopener">V2Ray节点的搭建</a>，以及如何使用一键安装脚本进行安装，此外还将对V2Rady节点优化以及V2Ray客户端软件的下载和设置等内容进行介绍。</p>
+<h2>第一部分：<a href="http://bit.ly/3NakH92" target="_blank" rel="noreferrer noopener">V2Ray简介</a>
+</h2>
+<p data-adtags-visited="true">很多人想要去V2Ray的官网了解V2Ray为何物，但是总会被官网上面的各种专业术语逼得完全看不下去，甚至失去了对V2Ray的兴趣，实际上我们对于V2Ray只要进行基础了解就完全够了。</p>
+<h3><a href="http://bit.ly/37xEv6q" target="_blank" rel="noreferrer noopener">V2Ray是什么？</a></h3>
+<p data-adtags-visited="true">简单地说，就是一个科学上完的工具，V2Ray和Shadowsocks性能类似，都是用于翻墙。</p>
+<h2>V2Ray和Shadowsocks有什么区别?</h2>
+<p data-adtags-visited="true">由于种种原因，Shadowsocks的开发者被“喝茶”，所以和Shadowsocks有关的一切系统开发都停下来了，V2Ray就是在这个时候站起来了，他在前辈的基础上又加深了自己的性能，让自己的隐蔽性更高，让中国防火墙更难检测到。实际上，V2Ray就是Shadowsocks的升级版。</p>
+<p data-adtags-visited="true">而这二者的相似点都在于，双方都没有商业公司提供技术支持，完全就是软件高手自己开发出来给大家使用的。</p>
+<p data-adtags-visited="true">既然是在Shadowsocks的基础上进行的更新，V2Ray的功能自然是更加的强大，不仅改正了Shadowsocks的一些缺点，还进行了系统的更新化，让中国防火墙更难检测到它的存在，由于V2Ray还算是新星软件，所以很多人还不知道它的存在。就目前V2Ray还是在从事与电脑技术行业的工作者当中较为流行，由于V2Ray节点的搭建并不简单，需要涉及一定技术，所以很多人都会直接干脆选择VPN。</p>
+<figure class="wp-block-image"><img class="wp-image-7295" src="https://www.drazehosting.com/wp-content/uploads/2020/07/word-image-14.png" alt=""></figure>
+<h2>自己不会安装搭建V2Ray怎么办？</h2>
+<p data-adtags-visited="true">如果自己不会搭建V2Ray节点，但也想用V2Ray节点，那么就可以参考以下两种方案。</p>
+<ol>
+<li>
+<strong>用别人的V2Ray: </strong><br>
+这个就很简单了，只要你有朋友愿意和你分享V2Ray账号，你们可以共同使用。</li>
+<li>
+<strong>购买V2Ray:</strong><br>
+目前出售V2Ray的商家不多，在购买的时候一定要擦亮自己的双眼，千万不要被骗子给骗了。在这里可以推荐大家使用WannaFlix。</li>
+<li>
+<strong>改用VPN：</strong><br>
+V2Ray和VPN一样都属于翻墙软件，它们只是科学上网的一个工具，如果你对于V2Ray的执念并没有那么深的话，就可以直接用VPN软件了。</li>
+</ol>
+<figure class="wp-block-table">
+<table>
+<tbody>
+<tr>
+<td></td>
+<td>VPN</td>
+<td>评级</td>
+<td>链接</td>
+</tr>
+<tr>
+<td><strong># 1</strong></td>
+<td></td>
+<td>ExpressVPN 评测（中文）</td>
+<td>» 访问 ExpressVPN<br>
+(含三个月免费折扣)</td>
+</tr>
+<tr>
+<td><strong># 2</strong></td>
+<td></td>
+<td>NordVPN 评测（中文）</td>
+<td>» 访问 NordVPN<br>
+(含优惠折扣)</td>
+</tr>
+<tr>
+<td><strong># 3</strong></td>
+<td></td>
+<td>PureVPN 评测（英文）</td>
+<td>» 访问 PureVPN<br>
+(含优惠折扣)</td>
+</tr>
+<tr>
+<td><strong># 4</strong></td>
+<td></td>
+<td>VyprVPN 评测（中文）</td>
+<td>» 访问 VyprVPN<br>
+(含优惠折扣)</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h2>V2Ray翻墙系统的组成：</h2>
+<p data-adtags-visited="true">V2Ray翻墙系统由两大部分组成：</p>
+<h3>V2Ray节点</h3>
+<p data-adtags-visited="true">节点的设立地点一定要是位于墙外（中国大陆以外）的VPS电脑服务器上搭建。</p>
+<p data-adtags-visited="true">一个V2Ray节点（服务器）可以给多个用户一起使用，可以并联使用，不会影响彼此。</p>
+<p data-adtags-visited="true">可以自己搭建V2Ray节点</p>
+<h3>V2Ray客户端软件</h3>
+<p data-adtags-visited="true">直接用来使用V2Ray翻墙的软件，可以在不同的设备上使用：如电脑、手机等。</p>
+<p data-adtags-visited="true">V2Ray客户端软件的下载是不需要花费任何的钱哦，如果遇到付费才可以下载的，就可以pass它。</p>
+<h2>自己搭建V2Ray节点所需条件：</h2>
+<p data-adtags-visited="true">首先你不能是一个电脑小白，如果你是电脑小白，也需要学会掌握基本的Linux系统操作指令：例如pwd、cd、ls、cp等，这些就相当于是建房子钱的地基了，没有了地基，自建的大楼是完全没有办法搭建的起来。</p>
+<p data-adtags-visited="true">有能力的用户可以直接购买海外VPS服务器，这样就会更加的稳定，而且每月资费仅仅需要三十五元人民币。</p>
+<p data-adtags-visited="true">英文语言能力：要能够明白产品页面的基础信息，如果不知道的话，可以借助于翻译软件，就是相对而言会麻烦点，毕竟有一些界面的单词是不可以复制粘贴翻译的，就需要自身手动输入。</p>
+<p data-adtags-visited="true">付款：要有一张有贝宝账号的卡，少部分的公司支持支付宝的付款方式。</p>
+<p data-adtags-visited="true">懂得怎样使用SSH方式连接VPS服务器：苹果电脑客户端用户可以使用MaciOS系统里面自带的终端Terminal，Windows用户就可以使用Putty或者乌班图。</p>
+<h2>第二部分：V2Ray节点的搭建和优化</h2>
+<h3>1. 购买墙外服务器（VPS）:</h3>
+<p data-adtags-visited="true">DigitalOcean、Vultr、搬瓦工、亚马逊都是海外较为常见的VPS供应商包括，以下将以DigitalOcean为例子为大家展开说明，目前新用户只要登录了<a href="https://www.vpndada.com/go/digitalocean%22%20/t%20%22https://www.vpndada.com/v2ray-tutorial-cn/_blank">DigitalOcean</a>的官网，就可以获取优惠折扣。DigitalOcean的注册和购买账号的方式很简单，就和我们平时注册别的网站一样，如果还不清楚，就可以去网上搜索相关的教程。</p>
+<h3>2. 创建虚拟主机VPS</h3>
+<p data-adtags-visited="true">完成购买服务器之后的下个步骤就是创建虚拟主机VPS。</p>
+<p data-adtags-visited="true">在DigitalOcean的主界面上端会有”Create”，的字眼，点击进入就可以调到菜单当中，选择虚拟主机—–“Droplets”即可。</p>
+<p data-adtags-visited="true"><strong>创建Droplet选项：</strong></p>
+<p data-adtags-visited="true">选择一个图片：选择配置下面的”乌班图”。</p>
+<p data-adtags-visited="true">选择一个资费项目：当我们看到Starter的界面，就可以注意页面的最下方位置，选择最便宜的三十块钱一个月的就好了。</p>
+<p data-adtags-visited="true">添加备份：正常情况是不需要。</p>
+<p data-adtags-visited="true">添加存储卡：不需要。</p>
+<p data-adtags-visited="true">选择服务器位置：这是很重要的，因为直接影响到你日后上网的速度，如果你要翻墙到海外，那么海外的节点一定要选择在亚洲海岸或是美国西海岸的服务器，目前推荐亚洲的节点是新加坡，美国的节点推荐选择圣佛朗西斯科。</p>
+<p data-adtags-visited="true">选择其他选项：看个人的需求进行选择，需要还是不需要。</p>
+<p data-adtags-visited="true">添加 SSH 的公钥（重要）：在这里添加自己用于SSH登录虚拟主机的公钥。</p>
+<p data-adtags-visited="true">多少个虚拟主机? 不需要变动，选择一个就好了。</p>
+<p data-adtags-visited="true">给虚拟主机取名字：看自己的喜好了，我是将主机命名为Siri。</p>
+<p data-adtags-visited="true">虚拟主机创建好之后，你会看到主机的IP地址，这里的IP地址是很重要的，因为下一步的登录需要用到。</p>
+<h2>3. 用SSH登录虚拟主机：</h2>
+<pre class="wp-block-preformatted">命令行基本是“ssh root@[IP Address]”。</pre>
+<p data-adtags-visited="true">连接好虚拟主机之后，先运行下面这个命令更新主机并下载相关软件：</p>
+<pre class="wp-block-preformatted">apt-get update -y &amp;&amp; apt-get install curl -y</pre>
+<h2>4. 一键安装V2Ray:</h2>
+<p data-adtags-visited="true">以Root身份连接到虚拟主机，然后运行以下命令：</p>
+<pre class="wp-block-preformatted">bash &lt;(curl -L -s https://install.direct/<span class="skimlinks-unlinked">go.sh</span>)</pre>
+<p data-adtags-visited="true">这个V2Ray一键安装脚本，在安装完毕V2Ray之后，还会将基本的配置都安置好，如果你没有别的需求，就直接可以上网使用了，每次系统重启后也会自动运行 V2Ray，非常的人性化且令人省心。</p>
+<h2>5. 修改V2Ray配置：</h2>
+<p data-adtags-visited="true">V2Ray一键安装脚本会自动生成一个V2Ray配置文件，其配置文件的名为（/etc/v2ray/<span class="skimlinks-unlinked">config.json</span>），如果你要修改配置，就可以在这个程序的基础上进行编辑更改，具体的运行方式如下。</p>
+<pre class="wp-block-preformatted">nano /etc/v2ray/<span class="skimlinks-unlinked">config.json</span></pre>
+<p data-adtags-visited="true">下文会有关于连接节点的重要问题，读者需要多加注意。</p>
+<p data-adtags-visited="true">用于后面使用软件V2Ray连接V2Ray节点：</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img class="wp-image-7296" src="https://www.drazehosting.com/wp-content/uploads/2020/07/word-image-15.png" alt=""></figure>
+</div>
+<p data-adtags-visited="true">Port指的是端口，ID那一行就是用户ID，alterID值得是额外的ID地址，ID的格式一定不能有变化，而有些参数是可以改动的。端口可以改变，用户可以改成445，额外ID和ID还是有区别的，额外ID是可以改动的。</p>
+<p data-adtags-visited="true">当你对服务器配置修改完毕之后，就可以输入以下命令。从而重启V2Ray软件:</p>
+<p data-adtags-visited="true">service v2ray restart</p>
+<h2>6. V2Ray服务器端提速优化（可选项）：</h2>
+<p data-adtags-visited="true">当我们创建完毕之后，就可以开始进行优化V2Ray节点，让翻墙速度变得更快的选项了，毕竟没有人可以拒绝更快的网速。</p>
+<h2>安装谷歌 TCP BBR拥塞控制算法</h2>
+<p data-adtags-visited="true">这是我的朋友SUKI所用到的一键安装脚本，在输入所有命令之前，我们都需要以Root身份SSH连接主机，接着再运行。</p>
+<pre class="wp-block-preformatted">wget --no-check-certificate <span class="skimlinks-unlinked">https://github.com/teddysun/across/raw/master/bbr.sh</span> &amp;&amp; chmod +x <span class="skimlinks-unlinked">bbr.sh</span> &amp;&amp; ./<span class="skimlinks-unlinked">bbr.sh</span></pre>
+<p data-adtags-visited="true">当系统出现“按任意键”提示的时候，就可以直接点击回车键，系统就会开始自动安装。</p>
+<p data-adtags-visited="true">在安装过程中有时候会弹出来几个选项窗口，用户直接点击回车键就可以，如果系统提示是否需要重启，你就看个人需要选择。</p>
+<p data-adtags-visited="true">重启V2Ray的命令程序字眼:</p>
+<pre class="wp-block-preformatted">service v2ray restart</pre>
+<p data-adtags-visited="true">当界面出现这个字眼的时候，就恭喜用户已经优化提速完成了，可以开启更快速的科学上网模式了。</p>
+<p data-adtags-visited="true">下面来介绍一下V2Ray客户端的使用方法。</p>
+<h2>第三部分：V2Ray客户端的下载和配置</h2>
+<h3>V2Ray客户端软件下载：</h3>
+<ul>
+<li>
+<strong>Windows电脑</strong>：<a href="https://github.com/2dust/v2rayN/releases%22%20/t%20%22https://www.vpndada.com/v2ray-tutorial-cn/_blank">下载 V2RayN</a> (选择latest release，下载v2rayN<span class="skimlinks-unlinked">-Core.zip形式的压缩包，安装到电脑之后就可以开始解压，并且运行其中的v2rayN.exe</span>即可)</li>
+<li>
+<strong>苹果系统电脑</strong>：<a href="https://github.com/Cenmrev/V2RayX/releases/%22%20/t%20%22https://www.vpndada.com/v2ray-tutorial-cn/_blank">下载 V2RayX</a> (下载名为latest <span class="skimlinks-unlinked">release.zip</span>的压缩包就可，)</li>
+<li>
+<strong>安卓手机/平板</strong>：<a href="https://github.com/2dust/v2rayNG/releases/%22%20/t%20%22https://www.vpndada.com/v2ray-tutorial-cn/_blank">下载 V2RayNG</a> (下载latest release的<span class="skimlinks-unlinked">app-universal-release.apk</span>安装文件即可)</li>
+<li>
+<strong>苹果手机/平板</strong>：这就简单了，直接买一个海外的账号，然后就可以在Apple store里面下载使用了。</li>
+</ul>
+<h3>V2Ray客户端的基本配置：</h3>
+<p data-adtags-visited="true">因为V2Ray软件在每个系统平台上展示的界面都会有略微的差别，下面对于基础不会变的信息进行说明。</p>
+<ul>
+<li>
+<strong>Server（服务器地址）</strong>：所指的就是VPS虚拟主机的IP地址</li>
+<li>
+<strong>Port（端口）</strong>：在服务器配置文件<span class="skimlinks-unlinked">config.json</span>中可以找到</li>
+<li>
+<strong>ID（用户ID）</strong>：在服务器配置文件<span class="skimlinks-unlinked">config.json</span>中可以找到</li>
+<li>
+<strong>AlterID（额外ID）</strong>：在服务器配置文件<span class="skimlinks-unlinked">config.json</span>中可以找到</li>
+<li>
+<strong>Security（加密方式）</strong>：凭个人喜好来决定。</li>
+</ul>
+<h3>V2Ray代理模式的设置：</h3>
+<p data-adtags-visited="true">V2Ray主要有两种代理模式：</p>
+<ul>
+<li>
+<strong>全局模式</strong>：非常适合给大部分都是访问国外网站的用户使用，当你开启了这个选项知乎，电脑所有流量都走V2Ray代理，隐蔽性会更高。</li>
+<li>
+<strong>PAC模式（PAC）</strong>：可以定义谷歌浏览器翻墙，而火狐浏览器不翻墙，或是定义360浏览器不翻墙，这样就可以把流量端口岔开，然后上网更加的方便快捷，就不会出现，翻墙时候国外网站不好使的情况了。</li>
+</ul>
+<p data-adtags-visited="true">希望阅读了此文的读者都可以学会自建V2Ray，一同通向科学上网之路</p>
+		</article>
+								            <div class="post-actions">
+            	<a href="javascript:;" class="post-like action action-like" data-pid="51"><i class="fa fa-thumbs-o-up"></i>赞(<span>0</span>)</a>            	<a href="javascript:;" class="action action-rewards" data-event="rewards"><i class="fa fa-jpy"></i> </a>            	            </div>
+        		<div class="post-copyright">未经允许不得转载：<a href="https://mmhunter3515.github.io/">v2ray-ssr-learn</a> &raquo; <a href="https://mmhunter3515.github.io/most-detailed-v2ray-tutorials/">最详细V2Ray教程: 安装和配置教学</a>
+</div>		
+					<div class="action-share"></div>
+		
+		<div class="article-tags"></div>
+		
+		
+		            <nav class="article-nav">
+                <span class="article-nav-prev">上一篇<br><a href="https://mmhunter3515.github.io/blinkload-ssr-v2ray/" rel="prev">Blinkload SSR/V2Ray全协议的全能型机场</a></span>
+                <span class="article-nav-next">下一篇<br><a href="https://mmhunter3515.github.io/ssr-vs-v2ray-vs-trojan-3/" rel="next">SSR vs V2ray vs Trojan 3类机场对比</a></span>
+            </nav>
+        
+				<div class="relates">
+<div class="title"><h3>相关推荐</h3></div>
+<ul><li><a href="https://mmhunter3515.github.io/shadowsocksr-ssr-client-download/">ShadowsocksR SSR客户端下载的详细教程</a></li></ul>
+</div>				<div class="title" id="comments">
+	<h3>评论 <small>抢沙发</small>
+</h3>
+</div>
+<div id="respond" class="no_webshot">
+		
+	<form action="https://mmhunter3515.github.io/wp-comments-post.php" method="post" id="commentform">
+		<div class="comt">
+			<div class="comt-title">
+				<img data-src="https://secure.gravatar.com/avatar/?s=100&d=mm" class="avatar avatar-100" height="50" width="50">				<p><a id="cancel-comment-reply-link" href="javascript:;">取消</a></p>
+			</div>
+			<div class="comt-box">
+				<textarea placeholder="你的评论可以一针见血" class="input-block-level comt-area" name="comment" id="comment" cols="100%" rows="3" tabindex="1" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+				<div class="comt-ctrl">
+					<div class="comt-tips">
+<input type="hidden" name="comment_post_ID" value="51" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<label for="comment_mail_notify" class="checkbox inline hide" style="padding-top:0"><input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked>有人回复时邮件通知我</label>
+</div>
+					<button type="submit" name="submit" id="submit" tabindex="5">提交评论</button>
+					<!-- <span data-type="comment-insert-smilie" class="muted comt-smilie"><i class="icon-thumbs-up icon12"></i> 表情</span> -->
+				</div>
+			</div>
+
+												<div class="comt-comterinfo" id="comment-author-info">
+						<ul>
+							<li class="form-inline">
+<label class="hide" for="author">昵称</label><input class="ipt" type="text" name="author" id="author" value="" tabindex="2" placeholder="昵称"><span class="text-muted">昵称 (必填)</span>
+</li>
+							<li class="form-inline">
+<label class="hide" for="email">邮箱</label><input class="ipt" type="text" name="email" id="email" value="" tabindex="3" placeholder="邮箱"><span class="text-muted">邮箱 (必填)</span>
+</li>
+							<li class="form-inline">
+<label class="hide" for="url">网址</label><input class="ipt" type="text" name="url" id="url" value="" tabindex="4" placeholder="网址"><span class="text-muted">网址</span>
+</li>
+						</ul>
+					</div>
+									</div>
+
+	</form>
+	</div>
+	</div>
+	</div>
+	<div class="sidebar">
+</div></section>
+
+
+<footer class="footer">
+	<div class="container">
+						<p>&copy; 2022 <a href="https://mmhunter3515.github.io/">v2ray-ssr-learn</a> &nbsp; </p>
+			</div>
+</footer>
+
+
+<script>
+window.jsui={
+	www: 'https://mmhunter3515.github.io',
+	uri: 'https://mmhunter3515.github.io/wp-content/themes/dux',
+	ver: '5.0',
+	roll: ["1","2"],
+	ajaxpager: '5',
+	url_rp: 'https://mmhunter3515.github.io/?page_id=2',
+	qq_id: '',
+	qq_tip: ''
+};
+</script>
+<script type="text/javascript" src="https://mmhunter3515.github.io/wp-content/themes/dux/js/libs/bootstrap.min.js?ver=5.0" id="bootstrap-js"></script>
+<script type="text/javascript" src="https://mmhunter3515.github.io/wp-content/themes/dux/js/loader.js?ver=5.0" id="_loader-js"></script>
+</body>
+</html>

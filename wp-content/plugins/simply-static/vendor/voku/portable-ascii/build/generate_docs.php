@@ -1,4 +1,0 @@
-<br>
-<b>Warning</b>:  require(/www/wwwroot/smsmoney/wp-content/plugins/simply-static/vendor/voku/portable-ascii/build/../vendor/autoload.php): failed to open stream: No such file or directory in <b>/www/wwwroot/smsmoney/wp-content/plugins/simply-static/vendor/voku/portable-ascii/build/generate_docs.php</b> on line <b>3</b><br>
-<br>
-<b>Fatal error</b>:  require(): Failed opening required '/www/wwwroot/smsmoney/wp-content/plugins/simply-static/vendor/voku/portable-ascii/build/../vendor/autoload.php' (include_path='.:') in <b>/www/wwwroot/smsmoney/wp-content/plugins/simply-static/vendor/voku/portable-ascii/build/generate_docs.php</b> on line <b>3</b><br>
