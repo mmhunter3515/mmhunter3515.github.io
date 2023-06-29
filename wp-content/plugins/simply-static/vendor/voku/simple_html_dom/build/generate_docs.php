@@ -1,0 +1,4 @@
+<br>
+<b>Warning</b>:  require(/www/wwwroot/githubtelegram/wp-content/plugins/simply-static/vendor/voku/simple_html_dom/build/../vendor/autoload.php): failed to open stream: No such file or directory in <b>/www/wwwroot/githubtelegram/wp-content/plugins/simply-static/vendor/voku/simple_html_dom/build/generate_docs.php</b> on line <b>3</b><br>
+<br>
+<b>Fatal error</b>:  require(): Failed opening required '/www/wwwroot/githubtelegram/wp-content/plugins/simply-static/vendor/voku/simple_html_dom/build/../vendor/autoload.php' (include_path='.:') in <b>/www/wwwroot/githubtelegram/wp-content/plugins/simply-static/vendor/voku/simple_html_dom/build/generate_docs.php</b> on line <b>3</b><br>
