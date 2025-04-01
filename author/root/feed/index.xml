@@ -8,9 +8,9 @@
 	>
 
 <channel>
-	<title>虚拟金融</title>
-	<atom:link href="https://mmhunter3515.github.io/feed/" rel="self" type="application/rss+xml" />
-	<link>https://mmhunter3515.github.io/</link>
+	<title>u卡体，作者虚拟金融</title>
+	<atom:link href="https://mmhunter3515.github.io/author/root/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mmhunter3515.github.io/author/root/</link>
 	<description></description>
 	<lastBuildDate>Tue, 01 Apr 2025 10:41:06 +0000</lastBuildDate>
 	<language>zh-Hans</language>
